@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <title>py-script example</title>
+    <py-env>
+        - paths:
+            - /example/agent.py
+    </py-env>
+</head>
+
+<body>
+    <py-script>
+        from agent import Agent
+        Jett = Agent("jett", 100, False, "Vandal")
+        Phoenix = Agent("phoenix", 50, False, "Odin")
+        Sage = Agent("sage", 80, True, "Operator")
+        Killjoy = Agent("killjoy", 75, True, "Sheriff")
+    </py-script>
+
+    <py-script>
+        Jett.get_all_data()
+    </py-script>
+
+    <py-script>
+        Phoenix.get_all_data()
+    </py-script>
+
+    <py-script>
+        Sage.get_all_data()
+    </py-script>
+
+    <py-script>
+        Killjoy.get_demage()
+    </py-script>
+
+</body>
+
+</html>
